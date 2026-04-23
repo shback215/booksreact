@@ -75,7 +75,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Stanley B. Howard. All rights reserved.</p>
       </footer>
     </div>
   )
