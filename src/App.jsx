@@ -1,7 +1,8 @@
-import './App.css'
+import './css/App.css'
 import Trees from './assets/Trees.jpg'
 import Icarus from './assets/Icarus.jpg'
 import Jack from './assets/Jack.jpg'
+import BookCard from './components/BookCard'
 
 const books = [
   {
@@ -53,42 +54,9 @@ function App() {
       <main className="main">
         <section className="books-grid">
           {books.map((book) => (
-            <article key={book.id} className="book-card">
-              
-              <div className="book-cover">
-                <img 
-                  src={book.coverImage} 
-                  alt={book.altText}
-                  className="cover-image"
-                />
-              </div>
-              <div className="book-info">
-                <h2 className="book-title">{book.title}</h2>
-                <p className="book-author">by {book.author}</p>
-                <p className="book-description">{book.description}</p>
-                {book.chapters && (
-                    <div className="chapters" style={{ marginLeft: '20px', marginTop: '10px' }}>
-                      <p>Chapters:</p>
-                      {book.chapters.map((chapter, index) => (
-                        <div key={index} style={{ marginBottom: '5px' }}>
-                        <a key={index} href={chapter.link} className="chapter-link">
-                          {chapter.title}
-                        </a>
-                        </div>
-                      ))}
-                    </div>
-                )}
-                <a 
-                  href={book.amazonLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="amazon-button"
-                >
-                  Buy on Amazon
-                </a>
-              </div>
-            </article>
+              <BookCard key={book.id} book={book} />
           ))}
+          
         </section>
       </main>
 
