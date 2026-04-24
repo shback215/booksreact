@@ -20,7 +20,7 @@ function BookCard({book}) {
                     <p>Chapters:</p>
                     {book.chapters.map((chapter, index) => (
                     <div key={index} style={{ marginBottom: '5px' }}>
-                    <a key={index} href={chapter.link} className="chapter-link">
+                    <a key={index} href={chapter.link} target="_blank" rel="noopener noreferrer" className="chapter-link">
                         {chapter.title}
                     </a>
                     </div>
